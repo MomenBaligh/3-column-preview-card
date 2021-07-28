@@ -1,0 +1,136 @@
+$Bright-orange: hsl(31, 77%, 52%);
+$Dark-cyan: hsl(184, 100%, 22%);
+$Very-dark-cyan: hsl(179, 100%, 13%);
+$Transparent-white: hsla(0, 0%, 100%, 0.75);
+$Very-light-gray: hsl(0, 0%, 95%);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  overflow-x: hidden;
+  font-weight: 400;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $Transparent-white;
+}
+
+h2 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  color: $Transparent-white;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  border-radius: 10px;
+  margin-top: 170px;
+  display: flex;
+  max-width: 920px;
+  min-width: 300px;
+  overflow: hidden;
+
+  section {
+    padding: 50px;
+    width: 33.3%;
+    h2 {
+      margin-top: 30px;
+      font-size: 40px;
+    }
+
+    p {
+      margin-top: 27px;
+      line-height: 24.5px;
+      width: 101%;
+    }
+
+    button {
+      margin-top: 83px;
+      border-radius: 25px;
+      width: 145px;
+      height: 50px;
+      outline: none;
+      border: none;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    button:hover {
+      background-color: transparent;
+      border: 2px $Transparent-white solid;
+      color: $Transparent-white;
+    }
+  }
+
+  .sedan {
+    background-color: $Bright-orange;
+
+    button {
+      color: $Bright-orange;
+    }
+  }
+
+  .suv {
+    background-color: $Dark-cyan;
+
+    button {
+      color: $Dark-cyan;
+    }
+  }
+
+  .luxury {
+    background-color: $Very-dark-cyan;
+
+    button {
+      color: $Very-dark-cyan;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  main {
+    border-radius: 10px;
+    width: 80%;
+
+    section {
+      padding: 20px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  main {
+    flex-direction: column;
+    width: 55%;
+
+    section {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    margin-top: 85px;
+    width: 87%;
+
+    section {
+      height: 444px;
+      padding: 50px;
+
+      button {
+        margin-top: 25px;
+      }
+    }
+  }
+}
